@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login {
+  background: #242424;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+
+  &Box {
+    height: 600px;
+    width: 365px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  &Image {
+    margin-top: 42px;
+  }
+
+  &Area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &Item {
+    margin-top: 42px;
+    width: 278px;
+    height: 24px;
+    border: 0;
+    border-bottom: 1px solid #d0cece;
+    outline: none;
+    &::placeholder {
+      font-size: 18px;
+      line-height: 24px;
+      color: #d0cece;
+    }
+  }
+}
+
+.Button {
+  width: 278px;
+  height: 52px;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.regButton {
+  background: #580ea2;
+  border-color: #580ea2;
+  color: #ffffff;
+  margin-top: 60px;
+  margin-bottom: 20px;
+
+  &:hover {
+    background: #3f007d;
+  }
+  &:active {
+    background: #271a58;
+  }
+}
+
+.error {
+  color: red;
+}

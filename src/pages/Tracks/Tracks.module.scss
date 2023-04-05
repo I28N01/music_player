@@ -1,0 +1,68 @@
+.section {
+  width: auto;
+  flex-grow: 3;
+  padding: 20px 40px 20px 40px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 45px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}
+
+.titleBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.sidebar {
+  max-width: 418px;
+  padding: 154px 70px 20px 70px;
+  transition: right 0.5s;
+}
+
+.sidebarBlock {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.SidebarList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (max-width: 1890px) {
+  .titleBox {
+    justify-content: flex-start;
+  }
+
+  .sidebar {
+    position: absolute;
+    background-color: #181818;
+    right: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    padding-right: 40px;
+  }
+}

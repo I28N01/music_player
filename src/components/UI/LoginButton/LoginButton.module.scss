@@ -1,0 +1,23 @@
+.Button {
+    width: 278px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  
+  .signUpButton {
+    background: #580ea2;
+    border-color: #580ea2;
+    color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .signUpButton:hover {
+    background: #3f007d;
+  }
+  .signUpButton:active {
+    background: #271a58;
+  }

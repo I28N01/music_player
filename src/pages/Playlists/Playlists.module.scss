@@ -1,0 +1,36 @@
+.section {
+  width: auto;
+  flex-grow: 3;
+  padding: 20px 40px 20px 40px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 45px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}
+
+.titleBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1890px) {
+  .titleBox {
+    justify-content: flex-start;
+  }
+}

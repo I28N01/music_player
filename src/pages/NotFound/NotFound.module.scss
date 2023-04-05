@@ -1,0 +1,79 @@
+  .NotFound {
+    background: rgb(24, 24, 24);
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+ 
+ .block {
+  width: 431px;
+  height: 366px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+ }
+
+.title{
+  width: 255px;
+  height: 168px;
+  font-size: 160px;
+  line-height: 168px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  width: 326px;
+  height: 40px;
+  left: 777px;
+  top: 527px;
+  line-height: 40px;
+  color: #ffffff;
+  font-family: 'StratosSkyeng';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 19px;
+}
+
+.text{
+  font-family: 'StratosSkyeng';
+  font-style: normal;
+  font-weight: 400;
+  width: 336px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #4e4e4e;
+  margin-bottom: 36px;
+}
+
+
+.Button {
+  width: 278px;
+  height: 82px;
+  background: #580ea2;
+  border-radius: 6px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  &:hover {
+    background: #3f007d;
+  }
+  &:active {
+    background: #271a58;
+  }
+}
