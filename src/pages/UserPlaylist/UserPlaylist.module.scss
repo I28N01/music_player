@@ -1,0 +1,23 @@
+.block {
+  width: auto;
+  flex-grow: 3;
+  padding: 20px 40px 20px 40px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  @media (max-height: 1280px) {
+    max-height: 90%;
+  }
+}
+
+.title {
+  margin-bottom: 45px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}

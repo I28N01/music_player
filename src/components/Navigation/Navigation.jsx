@@ -2,14 +2,13 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { setLogout } from '../../store/slices/authSlice'
-import * as S from './styles'
 import logo from '../../img/logo.png'
 import logoBlack from '../../img/LogoBlack.png'
 import { useThemeContext } from '../../context/theme'
 import dark from '../../img/icon/dark.svg'
 import light from '../../img/icon/light.svg'
 import { Outlet } from 'react-router-dom'
-
+import page from './Navigation.module.scss'
 export default function Navigation() {
   const [menuShown, setMenuShown] = useState(false)
 
@@ -34,13 +33,14 @@ export default function Navigation() {
   }
   console.log(theme)
   return (
-    <S.LayoutWrapper>
-      <S.LayoutContainer
+    <div className={page.section}>
+      <div
+        className={page.container}
         style={{ backgroundColor: theme.background, color: theme.color }}
       >
-        <S.Main>
-          <S.Navigation
-            data-testid="another-element"
+        <div className={page.wrap}>
+          <div
+            className={page.navigation}
             style={{
               backgroundColor: theme.backgroundHeader,
               color: theme.color,
@@ -48,88 +48,93 @@ export default function Navigation() {
           >
             <NavLink to="/tracks">
               {theme.colorA ? (
-                <S.LogoNav src={logoBlack} alt="logo" />
+                <div className={page.logoNav} src={logoBlack} alt="logo" />
               ) : (
-                <S.LogoNav src={logo} alt="logo" />
+                <div className={page.logoNav} src={logo} alt="logo" />
               )}
             </NavLink>
-            <S.Burger onClick={burgerClickHandler}>
+            <div className={page.burger} onClick={burgerClickHandler}>
               {menuShown ? (
                 <>
-                  <S.BurgerClose />
-                  <S.BurgerClose />
-                  <S.BurgerClose />
+                  <div className={page.burgerClose} />
+                  <div className={page.burgerClose} />
+                  <div className={page.burgerClose} />
                 </>
               ) : (
                 <>
-                  <S.BurgerLine />
-                  <S.BurgerLine />
-                  <S.BurgerLine />
+                  <div className={page.burgerLine} />
+                  <div className={page.burgerLine} />
+                  <div className={page.burgerLine} />
                 </>
               )}
-            </S.Burger>
-            <S.Menu style={{ display: menuShown ? 'block' : 'none' }}>
-              <S.MenuList>
+            </div>
+            <div
+              className={page.menu}
+              style={{ display: menuShown ? 'block' : 'none' }}
+            >
+              <ul className={page.menuList}>
                 <NavLink to="/tracks">
-                  <S.MenuItem
+                  <li
+                    className={page.menuItem}
                     style={{
                       backgroundColor: theme.backgroundHeader,
                       color: theme.color,
                     }}
                   >
                     Главная
-                  </S.MenuItem>
+                  </li>
                 </NavLink>
                 <NavLink to="/my_playlist">
-                  <S.MenuItem
+                  <li
+                    className={page.menuItem}
                     style={{
                       backgroundColor: theme.backgroundHeader,
                       color: theme.color,
                     }}
                   >
                     Мой плейлист
-                  </S.MenuItem>
+                  </li>
                 </NavLink>
                 <NavLink to="/login" onClick={onLogout}>
-                  <S.MenuItem
+                  <li
+                    className={page.menuItem}
                     style={{
                       backgroundColor: theme.backgroundHeader,
                       color: theme.color,
                     }}
                   >
                     Выйти
-                  </S.MenuItem>
+                  </li>
                 </NavLink>
                 {!changeTheme ? (
-                  <S.MenuItems>
-                    <S.ThemeDiv
-                      data-testid="custom-element"
-                      onClick={toggleTheme}
-                    >
-                      <S.ThemeSvg
+                  <div className={page.menuItems}>
+                    <div className={page.theme} onClick={toggleTheme}>
+                      <img
+                        className={page.themeSvg}
                         src={dark}
                         alt="dark"
                         onClick={toggleThemes}
                       />
-                    </S.ThemeDiv>
-                  </S.MenuItems>
+                    </div>
+                  </div>
                 ) : (
-                  <S.MenuItems>
-                    <S.ThemeDiv onClick={toggleTheme}>
-                      <S.ThemeSvg
+                  <div className={page.menuItems}>
+                    <div className={page.theme} onClick={toggleTheme}>
+                      <img
+                        className={page.themeSvg}
                         src={light}
                         alt="light"
                         onClick={toggleThemes}
                       />
-                    </S.ThemeDiv>
-                  </S.MenuItems>
+                    </div>
+                  </div>
                 )}
-              </S.MenuList>
-            </S.Menu>
-          </S.Navigation>
+              </ul>
+            </div>
+          </div>
           <Outlet />
-        </S.Main>
-      </S.LayoutContainer>
-    </S.LayoutWrapper>
+        </div>
+      </div>
+    </div>
   )
 }

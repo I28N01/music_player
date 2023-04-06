@@ -1,33 +1,29 @@
-import styled from 'styled-components'
+.section {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #383838;
+  transition: background-color 0.5s ease;
+}
 
-export const Menu = styled.div`
-  display: block;
-  visibility: visible;
-`
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: #181818;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
 
-export const MenuList = styled.ul`
-  color: white;
-  padding: 18px 0 10px 0;
-`
+.wrap {
+  min-height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-export const MenuItem = styled.li`
-  color: white;
-  padding: 5px 0;
-  margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  :hover {
-    color: #d9b6ff;
-  }
-`
-
-export const MenuLink = styled.a`
-    color: white;
-    }
-`
-
-export const Navigation = styled.section`
+.navigation {
   width: 244px;
   background-color: #181818;
   padding: 20px 0 20px 36px;
@@ -42,9 +38,9 @@ export const Navigation = styled.section`
     position: absolute;
     background-color: transparent;
   }
-`
+}
 
-export const LogoNav = styled.img`
+.logoNav {
   width: 113.33px;
   height: 43px;
   padding: 13px 0 13px 0;
@@ -55,9 +51,9 @@ export const LogoNav = styled.img`
     height: 40px;
     margin-bottom: 10px;
   }
-`
+}
 
-export const Burger = styled.div`
+.burger {
   width: 20px;
   height: 36px;
   padding: 13px 0;
@@ -68,9 +64,9 @@ export const Burger = styled.div`
     cursor: pointer;
     transform: scale(1.1);
   }
-`
+}
 
-export const BurgerLine = styled.span`
+.burgerLine {
   display: inline-block;
   width: 100%;
   height: 1px;
@@ -91,9 +87,9 @@ export const BurgerLine = styled.span`
   &:last-child {
     display: block;
   }
-`
+}
 
-export const BurgerClose = styled.span`
+.burgerClose {
   display: inline-block;
   width: 100%;
   height: 1px;
@@ -114,39 +110,38 @@ export const BurgerClose = styled.span`
   &:last-child {
     display: none;
   }
-`
-export const ThemeDiv = styled.div`
-  margin-top: 10px;
-`
-export const ThemeSvg = styled.img`
-  width: 39px;
-  height: 39px;
-`
-export const MenuItems = styled.li`
+}
+
+.menu {
+  display: block;
+  visibility: visible;
+}
+
+.menuList {
+  color: white;
+  padding: 18px 0 10px 0;
+}
+
+.menuItem {
+  color: white;
   padding: 5px 0;
   margin-bottom: 16px;
-`
-export const LayoutWrapper = styled.div`
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  background-color: #383838;
-  transition: background-color 0.5s ease;
-`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  :hover {
+    color: #d9b6ff;
+  }
+}
 
-export const LayoutContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative;
-  background-color: #181818;
-  overflow: hidden;
-  transition: background-color 0.5s ease;
-`
-
-export const Main = styled.div`
-  min-height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`
+.theme {
+  margin-top: 10px;
+}
+.themeSvg {
+  width: 39px;
+  height: 39px;
+}
+.menuItems {
+  padding: 5px 0;
+  margin-bottom: 16px;
+}

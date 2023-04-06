@@ -1,34 +1,34 @@
 import { useDispatch } from 'react-redux'
 import { getPlaylistId } from '../../store/slices/playlistSlice'
-import * as S from './styles'
-import PropTypes from 'prop-types';
-
+import PropTypes from 'prop-types'
+import page from './SidebarItem.module.scss'
 
 export default function SidebarItem({ src, isLoading, id }) {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-    const onPlaylistId = (e) => {
-        dispatch(getPlaylistId(e.target.id))
-    }
+  const onPlaylistId = (e) => {
+    dispatch(getPlaylistId(e.target.id))
+  }
 
-    return (
-        <div>
-            <S.SidebarItem>
-                {isLoading && <S.Skeleton />}
-                {!isLoading && (
-                    <S.SidebarImage
-                        src={src}
-                        id={id}
-                        onClick={(e) => onPlaylistId(e)}
-                    />
-                )}
-            </S.SidebarItem>
-        </div>
-    )
+  return (
+    <div>
+      <div className={page.sidebar}>
+        {isLoading && <div className={page.skeleton} />}
+        {!isLoading && (
+          <img
+            className={page.image}
+            src={src}
+            id={id}
+            onClick={(e) => onPlaylistId(e)}
+          />
+        )}
+      </div>
+    </div>
+  )
 }
 
 SidebarItem.propTypes = {
-    id: PropTypes.number,
-    src: PropTypes.string,
-    isLoading: PropTypes.bool
-    };
+  id: PropTypes.number,
+  src: PropTypes.string,
+  isLoading: PropTypes.bool,
+}
